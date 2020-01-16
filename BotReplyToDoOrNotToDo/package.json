@@ -1,0 +1,9 @@
+{
+  "name": "bot-reply-to-do-or-not-to-do",
+  "version": "0.0.0",
+  "description": "BotReplyToDoOrNotToDo",
+  "main": "app.js",
+  "author": {
+    "name": ""
+  }
+}
