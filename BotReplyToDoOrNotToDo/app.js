@@ -9,7 +9,6 @@ const rl = readline.createInterface({
 });
 rl.on('line', function (line) {
     var replyStringArr = Reply(line);
-    var replyStringArr = Reply(line);
     if ((replyStringArr[0] == "") && (replyStringArr[1] == "")) return;
     console.log(replyStringArr);
 });
@@ -37,7 +36,7 @@ function LookForTheSame(s1, s2) {
     for (var i = 0; i < s1length; ++i) {
         if (s1[i] == s2[0]) start = i; // 找到相同点，开始核对
         for (var j = 1; j < s2length; ++j) {
-            if (i + j >= s1.length) { // s1到句末，核对结束
+            if (i + j >= s1length) { // s1到句末，核对结束
                 possibleStart.push(start);
                 //possibleLength.push(j);
                 break;
