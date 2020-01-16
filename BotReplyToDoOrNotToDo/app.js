@@ -33,6 +33,11 @@ function LookForTheSame(s1, s2) {
 
     if ((s1length <= 0) || (s2length <= 0)) return -1;
 
+    //当s2.length==1时单独讨论
+    if (s2length == 1) {
+        if (s1[s1length - 1] == s2[0]) return s1length - 1;
+    }
+
     for (var i = 0; i < s1length; ++i) {
         if (s1[i] == s2[0]) start = i; // 找到相同点，开始核对
         for (var j = 1; j < s2length; ++j) {
@@ -45,6 +50,7 @@ function LookForTheSame(s1, s2) {
                 break;
             }
         }
+
         // s2到句末，s1没到句末，不是重复部分
     }
     //一般直接取重复最长的（第一个）就行了
